@@ -37,7 +37,7 @@
 .controls > button:hover,
 .controls > button:active,
 .controls > button:focus {
-    background: transparent;
+    background: #7a2c8a;
     box-shadow: 4px 4px 4px black;
     text-shadow: 2px 2px 2px black;
 }
