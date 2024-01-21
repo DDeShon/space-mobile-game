@@ -1,6 +1,8 @@
 class Enemy {}
 
-class Game {}
+class Game {
+  constructor(canvas) {}
+}
 
 window.addEventListener("load", function () {
   const canvas = this.document.getElementById("canvas1");
