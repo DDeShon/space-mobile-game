@@ -6,6 +6,12 @@ class Game {
     this.width = this.canvas.width;
     this.height = this.canvas.height;
   }
+  resize(width, height) {
+    this.canvas.width = this.width;
+    this.canvas.height = this.height;
+    this.width = width;
+    this.height = height;
+  }
 }
 
 window.addEventListener("load", function () {
@@ -13,4 +19,6 @@ window.addEventListener("load", function () {
   const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+
+  const game = new Game();
 });
