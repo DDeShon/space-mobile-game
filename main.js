@@ -1,7 +1,11 @@
 class Enemy {}
 
 class Game {
-  constructor(canvas) {}
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.width = this.canvas.width;
+    this.height = this.canvas.height;
+  }
 }
 
 window.addEventListener("load", function () {
