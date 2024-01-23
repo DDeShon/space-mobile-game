@@ -1,9 +1,9 @@
 class Game {
-  constructor(canvas) {
+  constructor(canvas, ctx) {
     this.canvas = canvas;
+    this.ctx = ctx;
     this.width = this.canvas.width;
     this.height = this.canvas.height;
-    this.posX = 0;
 
     window.addEventListener("resize", (e) => {
       this.resize(e.target.innerWidth, e.target.innerHeight);
@@ -17,9 +17,8 @@ class Game {
     this.height = height;
   }
 
-  render(context) {
-    this.posX += 1;
-    context.fillRect(this.posX, 100, 50, 150);
+  render() {
+    this.ctx.fillRect(200, 100, 150, 150);
   }
 }
 
@@ -30,7 +29,7 @@ window.addEventListener("load", function () {
   canvas.height = window.innerHeight;
   ctx.fillStyle = "green";
 
-  const game = new Game(canvas);
+  const game = new Game(canvas, ctx);
 
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
