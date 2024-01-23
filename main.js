@@ -16,7 +16,9 @@ class Game {
     this.height = height;
   }
 
-  render() {}
+  render(context) {
+    context.fillRect(100, 100, 50, 150);
+  }
 }
 
 window.addEventListener("load", function () {
@@ -26,4 +28,5 @@ window.addEventListener("load", function () {
   canvas.height = window.innerHeight;
 
   const game = new Game(canvas);
+  game.render(ctx);
 });
