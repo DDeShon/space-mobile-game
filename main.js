@@ -1,5 +1,3 @@
-class Enemy {}
-
 class Game {
   constructor(canvas) {
     this.canvas = canvas;
@@ -10,12 +8,15 @@ class Game {
       this.resize(e.target.innerWidth, e.target.innerHeight);
     });
   }
+
   resize(width, height) {
     this.canvas.width = this.width;
     this.canvas.height = this.height;
     this.width = width;
     this.height = height;
   }
+
+  render() {}
 }
 
 window.addEventListener("load", function () {
