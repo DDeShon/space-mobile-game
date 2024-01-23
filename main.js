@@ -34,4 +34,5 @@ window.addEventListener("load", function () {
     game.render(ctx);
     requestAnimationFrame(animate);
   }
+  this.requestAnimationFrame(animate);
 });
