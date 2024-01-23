@@ -3,6 +3,7 @@ class Game {
     this.canvas = canvas;
     this.width = this.canvas.width;
     this.height = this.canvas.height;
+    this.posX = 0;
 
     window.addEventListener("resize", (e) => {
       this.resize(e.target.innerWidth, e.target.innerHeight);
@@ -17,7 +18,8 @@ class Game {
   }
 
   render(context) {
-    context.fillRect(100, 100, 50, 150);
+    this.posX += 1;
+    context.fillRect(this.posX, 100, 50, 150);
   }
 }
 
@@ -31,6 +33,7 @@ window.addEventListener("load", function () {
   const game = new Game(canvas);
 
   function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     game.render(ctx);
     requestAnimationFrame(animate);
   }
