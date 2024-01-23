@@ -15,6 +15,7 @@ class Game {
     this.canvas.height = this.height;
     this.width = width;
     this.height = height;
+    this.ctx.fillStyle = "green";
   }
 
   render() {
@@ -27,13 +28,12 @@ window.addEventListener("load", function () {
   const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  ctx.fillStyle = "green";
 
   const game = new Game(canvas, ctx);
 
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    game.render(ctx);
+    game.render();
     requestAnimationFrame(animate);
   }
   this.requestAnimationFrame(animate);
