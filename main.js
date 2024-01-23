@@ -26,7 +26,12 @@ window.addEventListener("load", function () {
   const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  ctx.fillStyle = "green";
 
   const game = new Game(canvas);
-  game.render(ctx);
+
+  function animate() {
+    game.render(ctx);
+    requestAnimationFrame(animate);
+  }
 });
