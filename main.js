@@ -26,6 +26,7 @@ class Game {
   }
 
   render() {
+    this.enemy1.update();
     this.enemy1.draw();
   }
 }

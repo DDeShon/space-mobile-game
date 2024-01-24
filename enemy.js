@@ -3,10 +3,15 @@ class Enemy {
     this.game = game;
     this.x = 150;
     this.y = 200;
-    this.speedX;
-    this.speedY;
+    this.speedX = 0;
+    this.speedY = 1;
     this.width = 50;
     this.height = 50;
+  }
+
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
   }
   draw() {
     this.game.ctx.fillStyle = "red";
