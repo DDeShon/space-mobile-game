@@ -4,6 +4,7 @@ class Game {
     this.ctx = ctx;
     this.width = this.canvas.width;
     this.height = this.canvas.height;
+    this.enemy1 = new Enemy(this);
 
     this.start();
 
@@ -25,7 +26,7 @@ class Game {
   }
 
   render() {
-    this.ctx.fillRect(200, 100, 150, 150);
+    this.enemy1.draw();
   }
 }
 
