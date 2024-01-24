@@ -5,9 +5,15 @@ class Game {
     this.width = this.canvas.width;
     this.height = this.canvas.height;
 
+    this.start();
+
     window.addEventListener("resize", (e) => {
       this.resize(e.target.innerWidth, e.target.innerHeight);
     });
+  }
+
+  start() {
+    this.resize(window.innerWidth, window.innerHeight);
   }
 
   resize(width, height) {
@@ -15,7 +21,7 @@ class Game {
     this.canvas.height = this.height;
     this.width = width;
     this.height = height;
-    this.ctx.fillStyle = "green";
+    this.ctx.fillStyle = "blue";
   }
 
   render() {
