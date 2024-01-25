@@ -2,9 +2,9 @@ class Enemy {
   constructor(game) {
     this.game = game;
     this.x = Math.random() * this.game.width;
-    this.y = 0;
+    this.y = Math.random() * this.game.height;
     this.speedX = 0;
-    this.speedY = 10;
+    this.speedY = Math.random() * 4 + 1;
     this.width = 50;
     this.height = 50;
   }
