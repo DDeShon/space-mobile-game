@@ -7,15 +7,26 @@ class Enemy {
     this.speedY = Math.random() * 4 + 1;
     this.width = 50;
     this.height = 50;
+    this.free = true;
+  }
+
+  start() {
+    this.free = false;
+  }
+
+  reset() {
+    this.free = true;
   }
 
   update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
+    if (!this.free) {
+      this.x += this.speedX;
+      this.y += this.speedY;
 
-    if (this.y > this.game.height) {
-      this.x = Math.random() * this.game.width;
-      this.y = -this.height;
+      if (this.y > this.game.height) {
+        this.x = Math.random() * this.game.width;
+        this.y = -this.height;
+      }
     }
   }
 
