@@ -11,6 +11,8 @@ class Enemy {
   }
 
   start() {
+    this.x = Math.random() * this.game.width;
+    this.y = -this.height;
     this.free = false;
   }
 
@@ -24,14 +26,13 @@ class Enemy {
       this.y += this.speedY;
 
       if (this.y > this.game.height) {
-        this.x = Math.random() * this.game.width;
-        this.y = -this.height;
+        this.reset();
       }
     }
   }
 
   draw() {
-    if (this.free) {
+    if (!this.free) {
       this.game.ctx.fillStyle = "red";
       this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
     }
