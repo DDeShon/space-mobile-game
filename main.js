@@ -4,7 +4,9 @@ class Game {
     this.ctx = ctx;
     this.width = this.canvas.width;
     this.height = this.canvas.height;
-    this.enemy1 = new Enemy(this);
+
+    this.enemyPool = [];
+    this.numberOfEnemies = 50;
 
     this.start();
 
@@ -25,10 +27,13 @@ class Game {
     this.ctx.fillStyle = "blue";
   }
 
-  render() {
-    this.enemy1.update();
-    this.enemy1.draw();
+  createEnemyPool() {
+    for (let i = 0; i < this.numberOfEnemies; i++) {
+      this.enemyPool.push(new Enemy(this));
+    }
   }
+
+  render() {}
 }
 
 window.addEventListener("load", function () {
