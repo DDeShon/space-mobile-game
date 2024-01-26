@@ -31,7 +31,9 @@ class Enemy {
   }
 
   draw() {
-    this.game.ctx.fillStyle = "red";
-    this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
+    if (this.free) {
+      this.game.ctx.fillStyle = "red";
+      this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
   }
 }
