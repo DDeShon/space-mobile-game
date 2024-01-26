@@ -15,7 +15,7 @@ class Enemy {
 
     if (this.y > this.game.height) {
       this.x = Math.random() * this.game.width;
-      this.y = 0;
+      this.y = -this.height;
     }
   }
 
