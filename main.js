@@ -7,6 +7,8 @@ class Game {
 
     this.enemyPool = [];
     this.numberOfEnemies = 50;
+    this.createEnemyPool();
+    console.log(this.enemyPool);
 
     this.start();
 
@@ -44,9 +46,12 @@ window.addEventListener("load", function () {
 
   const game = new Game(canvas, ctx);
 
-  function animate() {
+  let lastTime = 0;
+  function animate(timeStamp) {
+    const deltaTime = timeStamp - lastTime;
+    lastTime = timeStamp;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    game.render();
+    game.render(deltaTime);
     requestAnimationFrame(animate);
   }
   this.requestAnimationFrame(animate);
