@@ -3,7 +3,7 @@ class Enemy {
     this.game = game;
     this.width = 50;
     this.height = 50;
-    this.x = Math.random() * this.game.width - this.width;
+    this.x = Math.random() * this.game.width;
     this.y = -this.height;
     this.speedX = 0;
     this.speedY = Math.random() * 4 + 1;
@@ -11,7 +11,7 @@ class Enemy {
   }
 
   start() {
-    this.x = Math.random() * this.game.width - this.width;
+    this.x = Math.random() * this.game.width;
     this.y = -this.height;
     this.free = false;
   }
