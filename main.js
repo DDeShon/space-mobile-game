@@ -42,6 +42,16 @@ class Game {
     }
   }
 
+  handleEnemies(deltaTime) {
+    if (this.enemyTimer < this.enemyInterval) {
+      this.enemyTimer += deltaTime;
+    } else {
+      this.enemyTimer = 0;
+      const enemy = this.getEnemy();
+      enemy.start();
+    }
+  }
+
   render(deltaTime) {}
 }
 
