@@ -1,17 +1,17 @@
 class Enemy {
   constructor(game) {
     this.game = game;
-    this.x = Math.random() * this.game.width;
-    this.y = Math.random() * this.game.height;
-    this.speedX = 0;
-    this.speedY = Math.random() * 4 + 1;
     this.width = 50;
     this.height = 50;
+    this.x = Math.random() * this.game.width - this.width;
+    this.y = -this.height;
+    this.speedX = 0;
+    this.speedY = Math.random() * 4 + 1;
     this.free = true;
   }
 
   start() {
-    this.x = Math.random() * this.game.width;
+    this.x = Math.random() * this.game.width - this.width;
     this.y = -this.height;
     this.free = false;
   }
