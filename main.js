@@ -48,11 +48,13 @@ class Game {
     } else {
       this.enemyTimer = 0;
       const enemy = this.getEnemy();
-      enemy.start();
+      if (enemy) enemy.start();
     }
   }
 
-  render(deltaTime) {}
+  render(deltaTime) {
+    this.handleEnemies(deltaTime);
+  }
 }
 
 window.addEventListener("load", function () {
