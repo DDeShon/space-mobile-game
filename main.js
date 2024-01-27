@@ -8,7 +8,8 @@ class Game {
     this.enemyPool = [];
     this.numberOfEnemies = 50;
     this.createEnemyPool();
-    console.log(this.enemyPool);
+    this.enemyTimer = 0;
+    this.enemyInterval = 1000;
 
     this.start();
 
@@ -35,7 +36,13 @@ class Game {
     }
   }
 
-  render() {}
+  getEnemy() {
+    for (let i = 0; i < this.enemyPool.length; i++) {
+      if (this.enemyPool[i].free) return this.enemyPool[i];
+    }
+  }
+
+  render(deltaTime) {}
 }
 
 window.addEventListener("load", function () {
