@@ -26,6 +26,7 @@ class Game {
     window.addEventListener("mousedown", (e) => {
       this.mouse.x = e.x;
       this.mouse.y = e.y;
+      console.log(this.mouse.x, this.mouse.y);
     });
   }
 
