@@ -24,6 +24,11 @@ class Enemy {
     if (!this.free) {
       // float in
       if (this.y < 0) this.y += 5;
+
+      // make sure the enemy is always visible
+      if (this.x > this.game.width - this.width) {
+        this.x = this.game.width - this.width;
+      }
       this.x += this.speedX;
       this.y += this.speedY;
 
