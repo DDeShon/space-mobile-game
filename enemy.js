@@ -6,7 +6,7 @@ class Enemy {
     this.x = Math.random() * this.game.width;
     this.y = -this.height;
     this.speedX = 0;
-    this.speedY = Math.random() * 4 + 1;
+    this.speedY = Math.random() * 2 + 0.2;
     this.free = true;
   }
 
@@ -22,6 +22,8 @@ class Enemy {
 
   update() {
     if (!this.free) {
+      // float in
+      if (this.y < 0) this.y += 5;
       this.x += this.speedX;
       this.y += this.speedY;
 
