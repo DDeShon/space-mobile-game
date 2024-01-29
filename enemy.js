@@ -39,6 +39,10 @@ class Enemy {
         this.game.checkCollision(this, this.game.mouse) &&
         this.game.mouse.pressed
       ) {
+        this.lives--;
+      }
+
+      if (this.lives < 1) {
         this.reset();
       }
 
