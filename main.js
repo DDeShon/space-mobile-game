@@ -30,6 +30,7 @@ class Game {
       this.mouse.x = e.x;
       this.mouse.y = e.y;
       this.mouse.pressed = true;
+      this.mouse.fired = false;
     });
 
     window.addEventListener("mouseup", (e) => {
