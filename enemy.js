@@ -32,6 +32,11 @@ class Enemy {
       this.x += this.speedX;
       this.y += this.speedY;
 
+      // check collision
+      if (this.game.checkCollision(this, this.game.mouse)) {
+        this.reset();
+      }
+
       if (this.y > this.game.height) {
         this.reset();
       }
