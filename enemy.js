@@ -33,7 +33,10 @@ class Enemy {
       this.y += this.speedY;
 
       // check collision
-      if (this.game.checkCollision(this, this.game.mouse)) {
+      if (
+        this.game.checkCollision(this, this.game.mouse) &&
+        this.game.mouse.pressed
+      ) {
         this.reset();
       }
 
