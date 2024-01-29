@@ -3,16 +3,18 @@ class Enemy {
     this.game = game;
     this.width = 50;
     this.height = 50;
-    this.x = Math.random() * this.game.width;
-    this.y = -this.height;
+    this.x;
+    this.y;
     this.speedX = 0;
     this.speedY = Math.random() * 2 + 0.2;
+    this.lives;
     this.free = true;
   }
 
   start() {
     this.x = Math.random() * this.game.width;
     this.y = -this.height;
+    this.lives = 2;
     this.free = false;
   }
 
@@ -50,6 +52,12 @@ class Enemy {
     if (!this.free) {
       this.game.ctx.fillStyle = "red";
       this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
+      this.game.ctx.fillStyle = "blue";
+      this.game.ctx.fillText(
+        this.lives,
+        this.x + this.width * 0.5,
+        this.y + this.height * 0.5
+      );
     }
   }
 }

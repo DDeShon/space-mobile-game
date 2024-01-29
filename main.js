@@ -48,6 +48,9 @@ class Game {
     this.width = width;
     this.height = height;
     this.ctx.fillStyle = "blue";
+    this.ctx.font = "50px Bangers";
+    this.ctx.textAlign = "center";
+    this.ctx.textBaseline = "middle";
   }
 
   checkCollision(rect1, rect2) {
