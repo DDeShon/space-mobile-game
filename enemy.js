@@ -41,9 +41,11 @@ class Enemy {
       // check collision
       if (
         this.game.checkCollision(this, this.game.mouse) &&
-        this.game.mouse.pressed
+        this.game.mouse.pressed &&
+        !this.game.mouse.fired
       ) {
         this.lives--;
+        this.game.mouse.fired = true;
       }
 
       if (!this.isAlive()) {

@@ -17,6 +17,7 @@ class Game {
       width: 1,
       height: 1,
       pressed: false,
+      fired: false,
     };
 
     this.start();
