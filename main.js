@@ -14,6 +14,8 @@ class Game {
     this.mouse = {
       x: undefined,
       y: undefined,
+      width: 1,
+      height: 1,
       pressed: false,
     };
 
@@ -26,7 +28,13 @@ class Game {
     window.addEventListener("mousedown", (e) => {
       this.mouse.x = e.x;
       this.mouse.y = e.y;
-      console.log(this.mouse.x, this.mouse.y);
+      this.mouse.pressed = true;
+    });
+
+    window.addEventListener("mouseup", (e) => {
+      this.mouse.x = e.x;
+      this.mouse.y = e.y;
+      this.mouse.pressed = false;
     });
   }
 
