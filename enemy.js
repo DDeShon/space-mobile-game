@@ -22,6 +22,10 @@ class Enemy {
     this.free = true;
   }
 
+  isAlive() {
+    return this.lives >= 1;
+  }
+
   update() {
     if (!this.free) {
       // float in
@@ -42,7 +46,7 @@ class Enemy {
         this.lives--;
       }
 
-      if (this.lives < 1) {
+      if (!this.isAlive()) {
         this.reset();
       }
 
