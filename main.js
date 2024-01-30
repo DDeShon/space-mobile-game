@@ -40,7 +40,6 @@ class Game {
     });
 
     window.addEventListener("touchstart", (e) => {
-      console.log(e);
       this.mouse.x = e.changedTouches[0].pageX;
       this.mouse.y = e.changedTouches[0].pageY;
       this.mouse.pressed = true;
