@@ -50,6 +50,7 @@ class Game {
     this.width = width;
     this.height = height;
     this.ctx.fillStyle = "white";
+    this.ctx.strokeStyle = "white";
     this.ctx.font = "50px Bangers";
     this.ctx.textAlign = "center";
     this.ctx.textBaseline = "middle";
