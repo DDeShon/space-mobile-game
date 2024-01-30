@@ -40,15 +40,16 @@ class Game {
     });
 
     window.addEventListener("touchstart", (e) => {
-      this.mouse.x = e.x;
-      this.mouse.y = e.y;
+      console.log(e);
+      this.mouse.x = e.changedTouches[0].pageX;
+      this.mouse.y = e.changedTouches[0].pageY;
       this.mouse.pressed = true;
       this.mouse.fired = false;
     });
 
     window.addEventListener("touchend", (e) => {
-      this.mouse.x = e.x;
-      this.mouse.y = e.y;
+      this.mouse.x = e.changedTouches[0].pageX;
+      this.mouse.y = e.changedTouches[0].pageY;
       this.mouse.pressed = false;
     });
   }
