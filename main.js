@@ -49,7 +49,7 @@ class Game {
     this.canvas.height = this.height;
     this.width = width;
     this.height = height;
-    this.ctx.fillStyle = "blue";
+    this.ctx.fillStyle = "white";
     this.ctx.font = "50px Bangers";
     this.ctx.textAlign = "center";
     this.ctx.textBaseline = "middle";

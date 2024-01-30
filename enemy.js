@@ -60,7 +60,6 @@ class Enemy {
 
   draw() {
     if (!this.free) {
-      this.game.ctx.fillStyle = "red";
       this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
       this.game.ctx.fillStyle = "blue";
       this.game.ctx.fillText(
