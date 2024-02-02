@@ -105,6 +105,7 @@ class Game {
   }
 
   render(deltaTime) {
+    this.drawStatusText();
     this.handleEnemies(deltaTime);
     this.enemyPool.forEach((enemy) => {
       enemy.update();
