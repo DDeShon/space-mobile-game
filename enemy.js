@@ -50,6 +50,7 @@ class Enemy {
 
       if (!this.isAlive()) {
         this.reset();
+        this.game.score++;
       }
 
       if (this.y > this.game.height) {
