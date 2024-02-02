@@ -12,6 +12,7 @@ class Game {
     this.enemyInterval = 1000;
 
     this.score;
+    this.lives;
 
     this.mouse = {
       x: undefined,
@@ -58,6 +59,7 @@ class Game {
   start() {
     this.resize(window.innerWidth, window.innerHeight);
     this.score = 0;
+    this.lives = 10;
   }
 
   resize(width, height) {
