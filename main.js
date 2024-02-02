@@ -100,6 +100,10 @@ class Game {
     }
   }
 
+  drawStatusText() {
+    this.ctx.fillText("Score: ", 20, 35);
+  }
+
   render(deltaTime) {
     this.handleEnemies(deltaTime);
     this.enemyPool.forEach((enemy) => {
