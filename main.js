@@ -11,6 +11,8 @@ class Game {
     this.enemyTimer = 0;
     this.enemyInterval = 1000;
 
+    this.score;
+
     this.mouse = {
       x: undefined,
       y: undefined,
@@ -55,6 +57,7 @@ class Game {
 
   start() {
     this.resize(window.innerWidth, window.innerHeight);
+    this.score = 0;
   }
 
   resize(width, height) {
@@ -103,7 +106,7 @@ class Game {
   drawStatusText() {
     this.ctx.save();
     this.ctx.textAlign = "left";
-    this.ctx.fillText("Score: ", 20, 35);
+    this.ctx.fillText("Score: ", 20, 40);
     this.ctx.restore();
   }
 
