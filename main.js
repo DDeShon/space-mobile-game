@@ -17,6 +17,7 @@ class Game {
     this.message1 = "Run!";
     this.message2 = "Or get eaten!";
     this.message3 = 'Press "ENTER" or "R" to start!';
+    this.gameOver;
 
     this.mouse = {
       x: undefined,
@@ -64,6 +65,7 @@ class Game {
     this.resize(window.innerWidth, window.innerHeight);
     this.score = 0;
     this.lives = 10;
+    this.gameOver = false;
   }
 
   resize(width, height) {
