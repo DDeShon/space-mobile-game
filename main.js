@@ -111,6 +111,19 @@ class Game {
     }
   }
 
+  triggerGameOver() {
+    if (!this.gameOver) {
+      this.gameOver = true;
+      if (this.lives < 1) {
+        this.message1 = "Aargh!";
+        this.message2 = "The crew was eaten!";
+      } else if (this.score >= this.winningScore) {
+        this.message1 = "Well done!";
+        this.message2 = "You have escaped the swarm!";
+      }
+    }
+  }
+
   drawStatusText() {
     this.ctx.save();
     this.ctx.textAlign = "left";
