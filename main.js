@@ -13,6 +13,9 @@ class Game {
 
     this.score;
     this.lives;
+    this.winningScore = 3;
+    this.message1;
+    this.message2;
 
     this.mouse = {
       x: undefined,
