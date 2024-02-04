@@ -14,8 +14,9 @@ class Game {
     this.score;
     this.lives;
     this.winningScore = 3;
-    this.message1;
-    this.message2;
+    this.message1 = "Run!";
+    this.message2 = "Or get eaten!";
+    this.message3 = 'Press "ENTER" or "R" to start!';
 
     this.mouse = {
       x: undefined,
