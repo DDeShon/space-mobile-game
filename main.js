@@ -134,6 +134,13 @@ class Game {
     if (this.lives < 1 || this.score >= this.winningScore) {
       this.triggerGameOver();
     }
+    if (this.gameOver) {
+      this.ctx.textAlign = "center";
+      this.ctx.font = "80px Bangers";
+      this.ctx.fillText(this.message1, this.width * 0.5, this.height * 0.5);
+      this.ctx.fillText(this.message2, this.width * 0.5, this.height * 0.5);
+      this.ctx.fillText(this.message3, this.width * 0.5, this.height * 0.5);
+    }
     this.ctx.restore();
   }
 
