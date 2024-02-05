@@ -131,6 +131,9 @@ class Game {
     for (let i = 0; i < this.lives; i++) {
       this.ctx.fillRect(20 + 15 * i, 60, 10, 20);
     }
+    if (this.lives < 1 || this.score >= this.winningScore) {
+      this.triggerGameOver();
+    }
     this.ctx.restore();
   }
 
