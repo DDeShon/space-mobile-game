@@ -11,7 +11,7 @@ class Game {
     this.enemyTimer = 0;
     this.enemyInterval = 1000;
 
-    this.score;
+    this.score = 0;
     this.lives;
     this.winningScore = 3;
     this.message1 = "Run!";
@@ -28,9 +28,11 @@ class Game {
       fired: false,
     };
 
+    this.resize(window.innerWidth, window.innerHeight);
     this.resetButton = document.getElementById("resetButton");
-
-    this.start();
+    this.resetButton.addEventListener("click", (e) => {
+      this.start();
+    });
 
     window.addEventListener("resize", (e) => {
       this.resize(e.target.innerWidth, e.target.innerHeight);
