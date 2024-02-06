@@ -28,6 +28,8 @@ class Game {
       fired: false,
     };
 
+    this.resetButton = document.getElementById("resetButton");
+
     this.start();
 
     window.addEventListener("resize", (e) => {
