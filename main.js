@@ -64,7 +64,7 @@ class Game {
   start() {
     this.resize(window.innerWidth, window.innerHeight);
     this.score = 0;
-    this.lives = 10;
+    this.lives = 1;
     this.gameOver = false;
   }
 
@@ -142,11 +142,13 @@ class Game {
         this.width * 0.5,
         this.height * 0.5 - 25
       );
+      this.ctx.font = "20px Bangers";
       this.ctx.fillText(
         this.message2,
         this.width * 0.5,
         this.height * 0.5 + 25
       );
+
       this.ctx.fillText(
         this.message3,
         this.width * 0.5,
