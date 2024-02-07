@@ -76,6 +76,13 @@ class Game {
     this.score = 0;
     this.lives = 1;
     this.gameOver = false;
+    this.enemyPool.forEach((enemy) => {
+      enemy.reset();
+    });
+    for (let i = 0; i < 2; i++) {
+      const enemy = this.getEnemy();
+      if (enemy) enemy.start();
+    }
   }
 
   resize(width, height) {
