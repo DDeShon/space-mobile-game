@@ -63,6 +63,12 @@ class Game {
       this.mouse.y = e.changedTouches[0].pageY;
       this.mouse.pressed = false;
     });
+
+    window.addEventListener("keyup", (e) => {
+      if (e.key === "Enter" || e.key.toLowerCase() === "r") {
+        this.start();
+      }
+    });
   }
 
   start() {
