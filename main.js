@@ -97,6 +97,14 @@ class Game {
     this.ctx.textBaseline = "middle";
   }
 
+  toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+
   checkCollision(rect1, rect2) {
     return (
       rect1.x < rect2.x + rect2.width &&
