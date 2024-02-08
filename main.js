@@ -67,6 +67,8 @@ class Game {
     window.addEventListener("keyup", (e) => {
       if (e.key === "Enter" || e.key.toLowerCase() === "r") {
         this.start();
+      } else if (e.key === " " || e.key.toLocaleLowerCase() === "f") {
+        this.toggleFullScreen();
       }
     });
   }
