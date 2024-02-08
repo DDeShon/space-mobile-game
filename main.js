@@ -79,7 +79,7 @@ class Game {
     this.enemyPool.forEach((enemy) => {
       enemy.reset();
     });
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10; i++) {
       const enemy = this.getEnemy();
       if (enemy) enemy.start();
     }
