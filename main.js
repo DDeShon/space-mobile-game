@@ -35,6 +35,9 @@ class Game {
     });
 
     this.fullScreenButton = document.getElementById("fullScreenButton");
+    this.fullScreenButton.addeventlistener("click", (e) => {
+      this.toggleFullScreen();
+    });
 
     window.addEventListener("resize", (e) => {
       this.resize(e.target.innerWidth, e.target.innerHeight);
