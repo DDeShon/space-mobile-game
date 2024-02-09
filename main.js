@@ -35,7 +35,7 @@ class Game {
     });
 
     this.fullScreenButton = document.getElementById("fullScreenButton");
-    this.fullScreenButton.addeventlistener("click", (e) => {
+    this.fullScreenButton.addEventListener("click", (e) => {
       this.toggleFullScreen();
     });
 
