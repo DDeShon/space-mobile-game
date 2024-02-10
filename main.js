@@ -81,7 +81,7 @@ class Game {
   start() {
     this.resize(window.innerWidth, window.innerHeight);
     this.score = 0;
-    this.lives = 1;
+    this.lives = 15;
     this.gameOver = false;
     this.enemyPool.forEach((enemy) => {
       enemy.reset();
