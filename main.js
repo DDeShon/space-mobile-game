@@ -17,6 +17,7 @@ class Game {
     this.message1 = "Run!";
     this.message2 = "Or get eaten!";
     this.message3 = 'Press "ENTER" or "R" to start!';
+    this.crewImage = document.getElementById("crew");
     this.gameOver = true;
 
     this.mouse = {
@@ -161,7 +162,7 @@ class Game {
     this.ctx.textAlign = "left";
     this.ctx.fillText("Score:  " + this.score, 20, 40);
     for (let i = 0; i < this.lives; i++) {
-      this.ctx.fillRect(20 + 15 * i, 60, 10, 20);
+      this.ctx.drawImage(this.crewImage, 20 + 15 * i, 60, 15, 30);
     }
     if (this.lives < 1 || this.score >= this.winningScore) {
       this.triggerGameOver();
