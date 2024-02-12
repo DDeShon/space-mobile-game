@@ -7,7 +7,6 @@ class Enemy {
     this.y;
     this.speedX;
     this.speedY;
-    this.lives;
     this.free = true;
   }
 
