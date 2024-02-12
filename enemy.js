@@ -86,6 +86,7 @@ class Beetlemorph extends Enemy {
   }
 
   update() {
+    super.update();
     if (!this.free) {
       if (this.isAlive()) {
         this.hit();
