@@ -75,5 +75,12 @@ class Enemy {
 class Beetlemorph extends Enemy {
   constructor(game) {
     super(game);
+    this.image = document.getElementById("beetlemorph");
+  }
+
+  start() {
+    super.start();
+    this.speedX = 0;
+    this.speedY = Math.random() * 2 + 0.2;
   }
 }
