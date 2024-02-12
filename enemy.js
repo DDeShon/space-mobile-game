@@ -24,6 +24,18 @@ class Enemy {
     return this.lives >= 1;
   }
 
+  hit() {
+    // check collision
+    if (
+      this.game.checkCollision(this, this.game.mouse) &&
+      this.game.mouse.pressed &&
+      !this.game.mouse.fired
+    ) {
+      this.lives--;
+      this.game.mouse.fired = true;
+    }
+  }
+
   update() {
     if (!this.free) {
       // float in
@@ -35,16 +47,6 @@ class Enemy {
       }
       this.x += this.speedX;
       this.y += this.speedY;
-
-      // check collision
-      if (
-        this.game.checkCollision(this, this.game.mouse) &&
-        this.game.mouse.pressed &&
-        !this.game.mouse.fired
-      ) {
-        this.lives--;
-        this.game.mouse.fired = true;
-      }
 
       if (!this.isAlive()) {
         this.reset();
