@@ -5,8 +5,8 @@ class Enemy {
     this.height = 50;
     this.x;
     this.y;
-    this.speedX = 0;
-    this.speedY = Math.random() * 2 + 0.2;
+    this.speedX;
+    this.speedY;
     this.lives;
     this.free = true;
   }
@@ -14,7 +14,6 @@ class Enemy {
   start() {
     this.x = Math.random() * this.game.width;
     this.y = -this.height;
-    this.lives = 2;
     this.free = false;
   }
 
@@ -82,5 +81,6 @@ class Beetlemorph extends Enemy {
     super.start();
     this.speedX = 0;
     this.speedY = Math.random() * 2 + 0.2;
+    this.lives = 2;
   }
 }
