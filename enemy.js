@@ -74,6 +74,6 @@ class Enemy {
 
 class Beetlemorph extends Enemy {
   constructor(game) {
-    super();
+    super(game);
   }
 }
