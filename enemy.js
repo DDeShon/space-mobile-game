@@ -84,4 +84,12 @@ class Beetlemorph extends Enemy {
     this.speedY = Math.random() * 2 + 0.2;
     this.lives = 2;
   }
+
+  update() {
+    if (!this.free) {
+      if (this.isAlive()) {
+        this.hit();
+      }
+    }
+  }
 }
