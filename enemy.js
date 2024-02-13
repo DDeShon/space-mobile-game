@@ -66,10 +66,10 @@ class Enemy {
     if (!this.free) {
       this.game.ctx.drawImage(
         this.image,
-        sx,
-        sy,
-        sw,
-        sh,
+        0,
+        0,
+        this.spriteWidth,
+        this.spriteHeight,
         this.x,
         this.y,
         this.width,
