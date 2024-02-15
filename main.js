@@ -164,6 +164,7 @@ class Game {
   handleSpriteTimer(deltaTime) {
     if (this.spriteTimer < this.spriteInterval) {
       this.spriteTimer += deltaTime;
+      this.spriteUpdate = false;
     } else {
       this.spriteTimer = 0;
       this.spriteUpdate = true;
@@ -205,6 +206,7 @@ class Game {
   }
 
   render(deltaTime) {
+    this.handleSpriteTimer(deltaTime);
     this.drawStatusText();
     if (!this.gameOver) this.handleEnemies(deltaTime);
     this.enemyPool.forEach((enemy) => {
