@@ -21,7 +21,7 @@ class Game {
     this.gameOver = true;
 
     this.spriteTimer = 0;
-    this.spriteInterval = 200;
+    this.spriteInterval = 100;
     this.spriteUpdate = false;
 
     this.mouse = {
@@ -213,6 +213,9 @@ class Game {
       enemy.update();
       enemy.draw();
     });
+    for (let i = this.enemyPool.length - 1; i >= 0; i--) {
+      this.enemyPool[i].update(deltaTime);
+    }
   }
 }
 
