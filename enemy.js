@@ -9,7 +9,9 @@ class Enemy {
     this.y;
     this.speedX;
     this.speedY;
+    this.frameX;
     this.frameY;
+    this.lastFrame;
     this.free = true;
   }
 
