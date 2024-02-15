@@ -20,6 +20,10 @@ class Game {
     this.crewImage = document.getElementById("crew");
     this.gameOver = true;
 
+    this.spriteTimer = 0;
+    this.spriteInterval = 200;
+    this.spriteUpdate = false;
+
     this.mouse = {
       x: undefined,
       y: undefined,
@@ -154,6 +158,15 @@ class Game {
         this.message1 = "Well done!";
         this.message2 = "You have escaped the swarm!";
       }
+    }
+  }
+
+  handleSpriteTimer(deltaTime) {
+    if (this.spriteTimer < this.spriteInterval) {
+      this.spriteTimer += deltaTime;
+    } else {
+      this.spriteTimer = 0;
+      this.spriteUpdate = true;
     }
   }
 
