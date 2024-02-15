@@ -18,6 +18,7 @@ class Enemy {
   start() {
     this.x = Math.random() * this.game.width;
     this.y = -this.height;
+    this.frameX = 0;
     this.frameY = Math.floor(Math.random() * 4);
     this.free = false;
   }
@@ -54,14 +55,17 @@ class Enemy {
       this.x += this.speedX;
       this.y += this.speedY;
 
-      if (!this.isAlive()) {
-        this.reset();
-        this.game.score++;
-      }
-
       if (this.y > this.game.height) {
         this.reset();
         this.game.lives--;
+      }
+
+      if (!this.isAlive()) {
+        this.frameX++;
+        if (this.frameX > this.lastFrame) {
+          this.reset();
+          if (!this.game.gameOver) this.game.score++;
+        }
       }
     }
   }
@@ -100,6 +104,7 @@ class Beetlemorph extends Enemy {
     this.speedX = 0;
     this.speedY = Math.random() * 2 + 0.2;
     this.lives = 1;
+    this.lastFrame = 3;
   }
 
   update() {
