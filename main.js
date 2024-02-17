@@ -19,6 +19,7 @@ class Game {
     this.message3 = 'Press "ENTER" or "R" to start!';
     this.crewImage = document.getElementById("crew");
     this.gameOver = true;
+    this.debug = true;
 
     this.spriteTimer = 0;
     this.spriteInterval = 100;
@@ -79,6 +80,8 @@ class Game {
         this.start();
       } else if (e.key === " " || e.key.toLocaleLowerCase() === "f") {
         this.toggleFullScreen();
+      } else if (e.key.toLowerCase() === "d") {
+        this.debug = !this.debug;
       }
     });
   }
