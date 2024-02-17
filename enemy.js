@@ -3,8 +3,9 @@ class Enemy {
     this.game = game;
     this.spriteWidth = 100;
     this.spriteHeight = 100;
-    this.width = this.spriteWidth;
-    this.height = this.spriteHeight;
+    this.sizeModifier = 2;
+    this.width = this.spriteWidth * this.sizeModifier;
+    this.height = this.spriteHeight * this.sizeModifier;
     this.x;
     this.y;
     this.speedX;
