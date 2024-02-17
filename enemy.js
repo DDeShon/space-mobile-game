@@ -86,12 +86,14 @@ class Enemy {
         this.width,
         this.height
       );
-      // this.game.ctx.strokeRect(this.x, this.y, this.width, this.height);
-      // this.game.ctx.fillText(
-      //   this.lives,
-      //   this.x + this.width * 0.5,
-      //   this.y + this.height * 0.5
-      // );
+      if (this.game.debug) {
+        this.game.ctx.strokeRect(this.x, this.y, this.width, this.height);
+        this.game.ctx.fillText(
+          this.lives,
+          this.x + this.width * 0.5,
+          this.y + this.height * 0.5
+        );
+      }
     }
   }
 }
