@@ -3,7 +3,7 @@ class Enemy {
     this.game = game;
     this.spriteWidth = 100;
     this.spriteHeight = 100;
-    this.sizeModifier = Math.random() * 0.4 + 0.8;
+    this.sizeModifier = Math.random() * 0.3 + 0.8;
     this.width = this.spriteWidth * this.sizeModifier;
     this.height = this.spriteHeight * this.sizeModifier;
     this.x;
