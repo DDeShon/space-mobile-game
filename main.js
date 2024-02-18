@@ -19,7 +19,7 @@ class Game {
     this.message3 = 'Press "ENTER" or "R" to start!';
     this.crewImage = document.getElementById("crew");
     this.gameOver = true;
-    this.debug = true;
+    this.debug = false;
 
     this.spriteTimer = 0;
     this.spriteInterval = 100;
