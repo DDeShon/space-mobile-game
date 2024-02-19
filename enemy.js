@@ -13,6 +13,9 @@ class Enemy {
     this.frameX;
     this.frameY;
     this.lastFrame;
+    this.minFrame;
+    this.maxFrame;
+    this.lives;
     this.free = true;
   }
 
@@ -133,7 +136,7 @@ class lobstermorph extends Enemy {
     super.start();
     this.speedX = 0;
     this.speedY = Math.random() * 0.5 + 0.2;
-    this.lives = 1;
+    this.lives = 3;
   }
 
   update() {
@@ -141,6 +144,9 @@ class lobstermorph extends Enemy {
     if (!this.free) {
       if (this.isAlive()) {
         this.hit();
+        if (this.frameX < this.maxFrame && this.game.spriteUpdate) {
+          this.frameX++;
+        }
       }
     }
   }
