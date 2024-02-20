@@ -17,7 +17,8 @@ class Game {
     this.message1 = "Run!";
     this.message2 = "Or get eaten!";
     this.message3 = 'Press "ENTER" or "R" to start!';
-    this.crewImage = document.getElementById("crew");
+    this.crewImage = document.getElementById("crewSprite");
+    this.crewMembers = [];
     this.gameOver = true;
     this.debug = false;
 
@@ -97,6 +98,16 @@ class Game {
     for (let i = 0; i < 10; i++) {
       const enemy = this.getEnemy();
       if (enemy) enemy.start();
+    }
+  }
+
+  generateCrew() {
+    this.crewMembers = [];
+    for (let i = 0; i < this.lives; i++) {
+      this.crewMembers.push({
+        frameX: Math.floor(Math.random() * 5),
+        frameY: Math.floor(Math.random() * 5),
+      });
     }
   }
 
