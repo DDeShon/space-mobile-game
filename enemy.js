@@ -125,7 +125,7 @@ class Beetlemorph extends Enemy {
   }
 }
 
-class lobstermorph extends Enemy {
+class Lobstermorph extends Enemy {
   constructor(game) {
     super(game);
     this.image = document.getElementById("lobstermorph");
