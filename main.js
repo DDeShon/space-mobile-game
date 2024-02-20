@@ -200,8 +200,8 @@ class Game {
       const height = 45;
       this.ctx.drawImage(
         this.crewImage,
-        0,
-        0,
+        width * this.crewMembers[i].frameX,
+        height * this.crewMembers[i].frameY,
         width,
         height,
         20 + 15 * i,
