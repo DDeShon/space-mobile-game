@@ -91,6 +91,7 @@ class Game {
     this.resize(window.innerWidth, window.innerHeight);
     this.score = 0;
     this.lives = 15;
+    this.generateCrew();
     this.gameOver = false;
     this.enemyPool.forEach((enemy) => {
       enemy.reset();
@@ -195,7 +196,19 @@ class Game {
     this.ctx.textAlign = "left";
     this.ctx.fillText("Score:  " + this.score, 20, 40);
     for (let i = 0; i < this.lives; i++) {
-      this.ctx.drawImage(this.crewImage, 20 + 15 * i, 60, 15, 30);
+      const width = 20;
+      const height = 45;
+      this.ctx.drawImage(
+        this.crewImage,
+        0,
+        0,
+        width,
+        height,
+        20 + 15 * i,
+        60,
+        width,
+        height
+      );
     }
     if (this.lives < 1 || this.score >= this.winningScore) {
       this.triggerGameOver();
