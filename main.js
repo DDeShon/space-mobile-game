@@ -204,7 +204,7 @@ class Game {
         height * this.crewMembers[i].frameY,
         width,
         height,
-        20 + 15 * i,
+        20 + 18 * i,
         60,
         width,
         height
