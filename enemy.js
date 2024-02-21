@@ -163,5 +163,13 @@ class Phantommorph extends Enemy {
   constructor(game) {
     super(game);
     this.image = document.getElementById("phantommorph");
+    this.lastFrame = 14;
+  }
+
+  start() {
+    super.start();
+    this.speedX = 0;
+    this.speedY = 1;
+    this.lives = 1;
   }
 }
