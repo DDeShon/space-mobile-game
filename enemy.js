@@ -61,7 +61,7 @@ class Enemy {
 
       if (this.y > this.game.height) {
         this.reset();
-        this.game.lives--;
+        if (!this.game.gameOver) this.game.lives--;
       }
 
       if (!this.isAlive()) {
@@ -156,5 +156,12 @@ class Lobstermorph extends Enemy {
         }
       }
     }
+  }
+}
+
+class Phantommorph extends Enemy {
+  constructor(game) {
+    super(game);
+    this.image = document.getElementById("phantommorph");
   }
 }
