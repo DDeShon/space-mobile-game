@@ -172,4 +172,13 @@ class Phantommorph extends Enemy {
     this.speedY = 1;
     this.lives = 1;
   }
+
+  update() {
+    super.update();
+    if (!this.free) {
+      if (this.isAlive()) {
+        this.hit();
+      }
+    }
+  }
 }
