@@ -188,6 +188,7 @@ class Phantommorph extends Enemy {
   update() {
     super.update();
     if (!this.free) {
+      this.handleFrames();
       // move horizontally
       if (this.x <= 0 || this.x >= this.game.width - this.width) {
         this.speedX *= -1;
