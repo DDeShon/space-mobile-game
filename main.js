@@ -144,11 +144,12 @@ class Game {
   createEnemyPool() {
     for (let i = 0; i < this.numberOfEnemies; i++) {
       const randomNumber = Math.random();
-      if (randomNumber < 0.8) {
-        this.enemyPool.push(new Beetlemorph(this));
-      } else {
-        this.enemyPool.push(new Lobstermorph(this));
-      }
+      // if (randomNumber < 0.8) {
+      //   this.enemyPool.push(new Beetlemorph(this));
+      // } else {
+      //   this.enemyPool.push(new Lobstermorph(this));
+      // }
+      this.enemyPool.push(new Phantommorph(this));
     }
   }
 
