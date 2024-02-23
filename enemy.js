@@ -199,3 +199,12 @@ class Phantommorph extends Enemy {
     }
   }
 }
+
+class EnemyState {
+  constructor(game, enemy) {
+    this.game = game;
+    this.enemy = enemy;
+  }
+}
+
+class Flying extends EnemyState {}
