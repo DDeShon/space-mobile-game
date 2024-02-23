@@ -177,8 +177,6 @@ class Phantommorph extends Enemy {
     this.speedX = Math.random() * 2 - 1;
     this.speedY = Math.random() * 0.5 + 0.2;
     this.lives = 1;
-    this.minFrame = 3;
-    this.maxFrame = 5;
     this.setState(0);
   }
 
@@ -221,19 +219,28 @@ class EnemyState {
 }
 
 class Flying extends EnemyState {
-  start() {}
+  start() {
+    this.enemy.minFrame = 0;
+    this.enemy.maxFrame = 2;
+  }
 
   update() {}
 }
 
 class Phasing extends EnemyState {
-  start() {}
+  start() {
+    this.enemy.minFrame = 3;
+    this.enemy.maxFrame = 5;
+  }
 
   update() {}
 }
 
 class Imploding extends EnemyState {
-  start() {}
+  start() {
+    this.enemy.minFrame = 6;
+    this.enemy.maxFrame = this.enemy.lastFrame + 1;
+  }
 
   update() {}
 }
