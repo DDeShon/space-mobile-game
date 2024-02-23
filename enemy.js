@@ -164,6 +164,11 @@ class Phantommorph extends Enemy {
     super(game);
     this.image = document.getElementById("phantommorph");
     this.lastFrame = 14;
+    this.states = [
+      new Flying(game, this),
+      new Phasing(game, this),
+      new Imploding(game, this),
+    ];
   }
 
   start() {
@@ -207,8 +212,20 @@ class EnemyState {
   }
 }
 
-class Flying extends EnemyState {}
+class Flying extends EnemyState {
+  start() {}
 
-class Phasing extends EnemyState {}
+  update() {}
+}
 
-class Imploding extends EnemyState {}
+class Phasing extends EnemyState {
+  start() {}
+
+  update() {}
+}
+
+class Imploding extends EnemyState {
+  start() {}
+
+  update() {}
+}
