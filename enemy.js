@@ -179,6 +179,7 @@ class Phantommorph extends Enemy {
     this.lives = 1;
     this.minFrame = 3;
     this.maxFrame = 5;
+    this.setState(0);
   }
 
   setState(state) {
@@ -200,6 +201,7 @@ class Phantommorph extends Enemy {
     super.update();
     if (!this.free) {
       this.handleFrames();
+      this.currentState.update();
       // move horizontally
       if (this.x <= 0 || this.x >= this.game.width - this.width) {
         this.speedX *= -1;
