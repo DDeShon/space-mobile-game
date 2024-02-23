@@ -171,8 +171,8 @@ class Phantommorph extends Enemy {
     this.speedX = Math.random() * 2 - 1;
     this.speedY = Math.random() * 0.5 + 0.2;
     this.lives = 1;
-    this.minFrame = 0;
-    this.maxFrame = 2;
+    this.minFrame = 3;
+    this.maxFrame = 5;
   }
 
   handleFrames() {
