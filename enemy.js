@@ -170,6 +170,8 @@ class Phantommorph extends Enemy {
       new Imploding(game, this),
     ];
     this.currentState;
+    this.switchTimer = 0;
+    this.switchInterval = 2000;
   }
 
   start() {
@@ -195,6 +197,14 @@ class Phantommorph extends Enemy {
     }
   }
 
+  switch() {
+    if (this.currentState === this.states[0]) {
+      this.setState(1);
+    } else {
+      this.setState(2);
+    }
+  }
+
   update() {
     super.update();
     if (!this.free) {
@@ -206,6 +216,15 @@ class Phantommorph extends Enemy {
       }
       if (this.isAlive()) {
         this.hit();
+      }
+
+      if (this.isAlive()) {
+        if (this.switchTimer < this.switchInterval) {
+          this.switchTimer += deltaTime;
+        } else {
+          this.switchTimer = 0;
+          this.switch();
+        }
       }
     }
   }
