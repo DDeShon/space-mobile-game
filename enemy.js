@@ -169,6 +169,7 @@ class Phantommorph extends Enemy {
       new Phasing(game, this),
       new Imploding(game, this),
     ];
+    this.currentState;
   }
 
   start() {
@@ -178,6 +179,11 @@ class Phantommorph extends Enemy {
     this.lives = 1;
     this.minFrame = 3;
     this.maxFrame = 5;
+  }
+
+  setState(state) {
+    this.currentState = this.states[state];
+    this.currentState.start();
   }
 
   handleFrames() {
