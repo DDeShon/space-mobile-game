@@ -208,3 +208,7 @@ class EnemyState {
 }
 
 class Flying extends EnemyState {}
+
+class Phasing extends EnemyState {}
+
+class Imploding extends EnemyState {}
