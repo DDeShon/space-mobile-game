@@ -219,9 +219,6 @@ class Phantommorph extends Enemy {
       if (this.x <= 0 || this.x >= this.game.width - this.width) {
         this.speedX *= -1;
       }
-      if (this.isAlive()) {
-        this.hit();
-      }
 
       if (this.isAlive()) {
         if (this.switchTimer < this.switchInterval) {
@@ -249,7 +246,9 @@ class Flying extends EnemyState {
     this.enemy.frameX = this.enemy.minFrame;
   }
 
-  update() {}
+  update() {
+    this.enemy.hit();
+  }
 }
 
 class Phasing extends EnemyState {
