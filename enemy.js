@@ -171,7 +171,7 @@ class Phantommorph extends Enemy {
     ];
     this.currentState;
     this.switchTimer = 0;
-    this.switchInterval = 2000;
+    this.switchInterval = Math.random() * 2000 + 1000;
   }
 
   start() {
@@ -201,11 +201,11 @@ class Phantommorph extends Enemy {
     if (this.currentState === this.states[0]) {
       this.setState(1);
     } else {
-      this.setState(2);
+      this.setState(0);
     }
   }
 
-  update() {
+  update(deltaTime) {
     super.update();
     if (!this.free) {
       this.handleFrames();
