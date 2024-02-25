@@ -205,6 +205,11 @@ class Phantommorph extends Enemy {
     }
   }
 
+  hit() {
+    super.hit();
+    if (!this.isAlive()) this.setState(2);
+  }
+
   update(deltaTime) {
     super.update();
     if (!this.free) {
