@@ -213,7 +213,6 @@ class Phantommorph extends Enemy {
   update(deltaTime) {
     super.update();
     if (!this.free) {
-      this.handleFrames();
       this.currentState.update();
       // move horizontally
       if (this.x <= 0 || this.x >= this.game.width - this.width) {
@@ -248,6 +247,7 @@ class Flying extends EnemyState {
 
   update() {
     this.enemy.hit();
+    this.enemy.handleFrames();
   }
 }
 
@@ -258,7 +258,15 @@ class Phasing extends EnemyState {
     this.enemy.frameX = this.enemy.minFrame;
   }
 
-  update() {}
+  update() {
+    this.enemy.handleFrames();
+    if (
+      this.game.checkCollision(this.enemy, this.game.mouse) &&
+      this.game.mouse.pressed
+    ) {
+      this.enemy.y += 25;
+    }
+  }
 }
 
 class Imploding extends EnemyState {
