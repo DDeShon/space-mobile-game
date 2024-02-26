@@ -269,6 +269,8 @@ class Phasing extends EnemyState {
       this.game.mouse.pressed
     ) {
       this.enemy.y += 25;
+      this.enemy.speedX = 0;
+      this.enemy.speedY = 2;
     }
   }
 }
