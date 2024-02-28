@@ -1,3 +1,10 @@
+class AudioControl {
+  constructor() {
+    this.newgame = document.getElementById("newgame");
+    this.boom1 = document.getElementById("boom1");
+  }
+}
+
 class Game {
   constructor(canvas, ctx) {
     this.canvas = canvas;
@@ -25,6 +32,8 @@ class Game {
     this.spriteTimer = 0;
     this.spriteInterval = 100;
     this.spriteUpdate = false;
+
+    this.sound = new AudioControl();
 
     this.mouse = {
       x: undefined,
