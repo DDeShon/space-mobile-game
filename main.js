@@ -109,6 +109,7 @@ class Game {
       const enemy = this.getEnemy();
       if (enemy) enemy.start();
     }
+    this.sound.newgame.play();
   }
 
   generateCrew() {
