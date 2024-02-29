@@ -3,6 +3,11 @@ class AudioControl {
     this.newgame = document.getElementById("newgame");
     this.boom1 = document.getElementById("boom1");
   }
+
+  play(audio) {
+    audio.currentTime = 0;
+    audio.play();
+  }
 }
 
 class Game {
