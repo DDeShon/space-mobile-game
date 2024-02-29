@@ -280,6 +280,7 @@ class Imploding extends EnemyState {
     this.enemy.minFrame = 6;
     this.enemy.maxFrame = this.enemy.lastFrame + 1;
     this.enemy.frameX = this.enemy.minFrame;
+    this.game.sound.boom1.play();
   }
 
   update() {}
