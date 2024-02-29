@@ -2,6 +2,7 @@ class AudioControl {
   constructor() {
     this.newgame = document.getElementById("newgame");
     this.boom1 = document.getElementById("boom1");
+    this.slide = document.getElementById("slide");
   }
 
   play(audio) {

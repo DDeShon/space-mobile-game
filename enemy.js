@@ -271,6 +271,7 @@ class Phasing extends EnemyState {
       this.enemy.y += 25;
       this.enemy.speedX = 0;
       this.enemy.speedY = 2;
+      this.game.sound.play(this.game.sound.slide);
     }
   }
 }
@@ -280,7 +281,7 @@ class Imploding extends EnemyState {
     this.enemy.minFrame = 6;
     this.enemy.maxFrame = this.enemy.lastFrame + 1;
     this.enemy.frameX = this.enemy.minFrame;
-    this.game.sound.boom1.play();
+    this.game.sound.play(this.game.sound.boom1);
   }
 
   update() {}
