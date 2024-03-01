@@ -2,6 +2,9 @@ class AudioControl {
   constructor() {
     this.newgame = document.getElementById("newgame");
     this.boom1 = document.getElementById("boom1");
+    this.boom2 = document.getElementById("boom2");
+    this.boom3 = document.getElementById("boom3");
+    this.boom4 = document.getElementById("boom4");
     this.slide = document.getElementById("slide");
   }
 
