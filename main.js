@@ -6,6 +6,8 @@ class AudioControl {
     this.boom3 = document.getElementById("boom3");
     this.boom4 = document.getElementById("boom4");
     this.slide = document.getElementById("slide");
+    this.win = document.getElementById("win");
+    this.lose = document.getElementById("lose");
   }
 
   play(audio) {
