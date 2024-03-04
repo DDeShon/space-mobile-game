@@ -9,6 +9,8 @@ class AudioControl {
     this.scream = document.getElementById("scream");
     this.win = document.getElementById("win");
     this.lose = document.getElementById("lose");
+
+    this.boomSounds = [this.boom1, this.boom2, this.boom3, this.boom4];
   }
 
   play(audio) {
