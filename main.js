@@ -199,6 +199,7 @@ class Game {
       if (this.lives < 1) {
         this.message1 = "Aargh!";
         this.message2 = "The crew was eaten!";
+        this.sound.play(this.sound.lose);
       } else if (this.score >= this.winningScore) {
         this.message1 = "Well done!";
         this.message2 = "You have escaped the swarm!";
