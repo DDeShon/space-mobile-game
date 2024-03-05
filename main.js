@@ -203,6 +203,7 @@ class Game {
       } else if (this.score >= this.winningScore) {
         this.message1 = "Well done!";
         this.message2 = "You have escaped the swarm!";
+        this.sound.play(this.sound.win);
       }
     }
   }
