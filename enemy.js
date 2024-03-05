@@ -61,7 +61,10 @@ class Enemy {
 
       if (this.y > this.game.height) {
         this.reset();
-        if (!this.game.gameOver) this.game.lives--;
+        if (!this.game.gameOver) {
+          this.game.lives--;
+          this.game.sound.play(this.game.sound.scream);
+        }
       }
 
       if (!this.isAlive()) {
