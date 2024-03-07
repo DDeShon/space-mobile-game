@@ -63,7 +63,7 @@ class Enemy {
         this.reset();
         if (!this.game.gameOver) {
           this.game.lives--;
-          this.game.sound.play(this.game.sound.scream);
+          this.game.sound.scream.play();
         }
       }
 
