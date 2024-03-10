@@ -168,13 +168,11 @@ class Game {
   createEnemyPool() {
     for (let i = 0; i < this.numberOfEnemies; i++) {
       const randomNumber = Math.random();
-      const score = 0;
-      if (randomNumber < 0.8 && score < 20) {
+      // const score = 0;
+      if (randomNumber < 0.8) {
         this.enemyPool.push(new Beetlemorph(this));
-      } else if (randomNumber > 0.8 && score < 20) {
+      } else if (randomNumber > 0.8) {
         this.enemyPool.push(new Lobstermorph(this));
-      } else if (score > 20) {
-        this.enemyPool.push(new Phantommorph(this));
       }
     }
   }
