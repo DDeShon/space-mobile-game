@@ -57,6 +57,8 @@ class Enemy {
       this.lives--;
       this.game.mouse.fired = true;
     }
+
+    if (!this.isAlive()) this.setState(2);
   }
 
   update() {
@@ -222,7 +224,7 @@ class Phantommorph extends Enemy {
 
   hit() {
     super.hit();
-    if (!this.isAlive()) this.setState(2);
+    // if (!this.isAlive()) this.setState(2);
   }
 
   update(deltaTime) {
