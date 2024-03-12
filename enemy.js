@@ -57,6 +57,8 @@ class Enemy {
       this.lives--;
       this.game.mouse.fired = true;
     }
+
+    if (!this.isAlive()) this.setState(2);
   }
 
   update() {
@@ -135,6 +137,7 @@ class Beetlemorph extends Enemy {
     if (!this.free) {
       if (this.isAlive()) {
         this.hit();
+        this.frameX++;
       }
     }
   }
@@ -197,10 +200,10 @@ class Phantommorph extends Enemy {
     this.setState(Math.floor(Math.random() * 2));
   }
 
-  setState(state) {
-    this.currentState = this.states[state];
-    this.currentState.start();
-  }
+  // setState(state) {
+  //   this.currentState = this.states[state];
+  //   this.currentState.start();
+  // }
 
   handleFrames() {
     if (this.game.spriteUpdate) {
@@ -222,7 +225,7 @@ class Phantommorph extends Enemy {
 
   hit() {
     super.hit();
-    if (!this.isAlive()) this.setState(2);
+    // if (!this.isAlive()) this.setState(2);
   }
 
   update(deltaTime) {
