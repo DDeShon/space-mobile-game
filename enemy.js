@@ -17,6 +17,13 @@ class Enemy {
     this.maxFrame;
     this.lives;
     this.free = true;
+
+    this.states = [
+      new Flying(game, this),
+      new Phasing(game, this),
+      new Imploding(game, this),
+    ];
+    this.currentState;
   }
 
   start() {
@@ -172,12 +179,12 @@ class Phantommorph extends Enemy {
     super(game);
     this.image = document.getElementById("phantommorph");
     this.lastFrame = 14;
-    this.states = [
-      new Flying(game, this),
-      new Phasing(game, this),
-      new Imploding(game, this),
-    ];
-    this.currentState;
+    // this.states = [
+    //   new Flying(game, this),
+    //   new Phasing(game, this),
+    //   new Imploding(game, this),
+    // ];
+    // this.currentState;
     this.switchTimer = 0;
     this.switchInterval = Math.random() * 2000 + 1000;
   }
