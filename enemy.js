@@ -123,6 +123,7 @@ class Beetlemorph extends Enemy {
     super(game);
     this.image = document.getElementById("beetlemorph");
     this.lastFrame = 3;
+    this.minFrame = 1;
   }
 
   start() {
@@ -148,6 +149,7 @@ class Lobstermorph extends Enemy {
     super(game);
     this.image = document.getElementById("lobstermorph");
     this.lastFrame = 14;
+    this.minFrame = 7;
   }
 
   start() {
@@ -182,6 +184,7 @@ class Phantommorph extends Enemy {
     super(game);
     this.image = document.getElementById("phantommorph");
     this.lastFrame = 14;
+    this.minFrame = 6;
     // this.states = [
     //   new Flying(game, this),
     //   new Phasing(game, this),
@@ -296,7 +299,7 @@ class Phasing extends EnemyState {
 
 class Imploding extends EnemyState {
   start() {
-    this.enemy.minFrame = 6;
+    // this.enemy.minFrame = 6;
     this.enemy.maxFrame = this.enemy.lastFrame + 1;
     this.enemy.frameX = this.enemy.minFrame;
     this.game.sound.play(
