@@ -193,14 +193,14 @@ class Phantommorph extends Enemy {
   constructor(game) {
     super(game);
     this.image = document.getElementById("phantommorph");
-    this.lastFrame = 14;
+    this.lastFrame = 12;
     this.minFrame = 6;
-    // this.states = [
-    //   new Flying(game, this),
-    //   new Phasing(game, this),
-    //   new Imploding(game, this),
-    // ];
-    // this.currentState;
+    this.states = [
+      new Flying(game, this),
+      new Phasing(game, this),
+      new Imploding(game, this),
+    ];
+    this.currentState;
     this.switchTimer = 0;
     this.switchInterval = Math.random() * 2000 + 1000;
   }
@@ -213,10 +213,10 @@ class Phantommorph extends Enemy {
     this.setState(Math.floor(Math.random() * 2));
   }
 
-  // setState(state) {
-  //   this.currentState = this.states[state];
-  //   this.currentState.start();
-  // }
+  setState(state) {
+    this.currentState = this.states[state];
+    this.currentState.start();
+  }
 
   handleFrames() {
     if (this.game.spriteUpdate) {
@@ -309,7 +309,7 @@ class Phasing extends EnemyState {
 
 class Imploding extends EnemyState {
   start() {
-    // this.enemy.minFrame = 6;
+    // this.enemy.minFrame = this.minFrame;
     this.enemy.maxFrame = this.enemy.lastFrame + 1;
     this.enemy.frameX = this.enemy.minFrame;
     this.game.sound.play(
