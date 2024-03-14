@@ -58,7 +58,7 @@ class Enemy {
       this.game.mouse.fired = true;
     }
 
-    if (!this.isAlive()) this.setState(2);
+    // if (!this.isAlive()) this.setState(2);
   }
 
   update() {
@@ -133,6 +133,11 @@ class Beetlemorph extends Enemy {
     this.lives = 1;
   }
 
+  hit() {
+    super.hit();
+    if (!this.isAlive()) this.setState(2);
+  }
+
   update() {
     super.update();
     this.frameX = 0;
@@ -157,6 +162,11 @@ class Lobstermorph extends Enemy {
     this.speedX = 0;
     this.speedY = Math.random() * 0.5 + 0.2;
     this.lives = 3;
+  }
+
+  hit() {
+    super.hit();
+    if (!this.isAlive()) this.setState(2);
   }
 
   update() {
@@ -228,7 +238,7 @@ class Phantommorph extends Enemy {
 
   hit() {
     super.hit();
-    // if (!this.isAlive()) this.setState(2);
+    if (!this.isAlive()) this.setState(2);
   }
 
   update(deltaTime) {
