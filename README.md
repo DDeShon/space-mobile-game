@@ -2,4 +2,4 @@
 
 A mobile space-shooter game made with html, css and JavaScript.
 
-Currently working on multiple enemy types and interactions regarding death animations.
+Currently working on multiple enemy types and interactions including death animations.
