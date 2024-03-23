@@ -134,7 +134,7 @@ class Beetlemorph extends Enemy {
 
   hit() {
     super.hit();
-    if (!this.isAlive()) this.setState(2);
+    // if (!this.isAlive()) this.setState(2);
   }
 
   update() {
@@ -165,7 +165,7 @@ class Lobstermorph extends Enemy {
 
   hit() {
     super.hit();
-    if (!this.isAlive()) this.setState(2);
+    // if (!this.isAlive()) this.setState(2);
   }
 
   update() {
@@ -237,7 +237,7 @@ class Phantommorph extends Enemy {
 
   hit() {
     super.hit();
-    if (!this.isAlive()) this.setState(2);
+    // if (!this.isAlive()) this.setState(2);
   }
 
   update(deltaTime) {
