@@ -57,6 +57,7 @@ class Enemy {
       this.lives--;
       this.game.mouse.fired = true;
     }
+    if (!this.isAlive()) this.setState(2);
   }
 
   update() {
@@ -82,7 +83,6 @@ class Enemy {
       if (!this.isAlive()) {
         if (this.game.spriteUpdate) {
           this.frameX++;
-          this.setState(2);
           if (this.frameX > this.lastFrame) {
             this.reset();
             if (!this.game.gameOver) this.game.score++;
@@ -121,8 +121,8 @@ class Beetlemorph extends Enemy {
   constructor(game) {
     super(game);
     this.image = document.getElementById("beetlemorph");
-    this.lastFrame = 3;
-    this.minFrame = 1;
+    this.lastFrame = 2;
+    this.minFrame = 0;
   }
 
   start() {
