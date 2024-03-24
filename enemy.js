@@ -56,7 +56,6 @@ class Enemy {
     ) {
       this.lives--;
       this.game.mouse.fired = true;
-      if (!this.isAlive()) this.setState(2);
     }
   }
 
@@ -86,6 +85,7 @@ class Enemy {
           if (this.frameX > this.lastFrame) {
             this.reset();
             if (!this.game.gameOver) this.game.score++;
+            if (!this.isAlive()) this.setState(2);
           }
         }
       }
