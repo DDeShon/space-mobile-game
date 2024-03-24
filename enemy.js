@@ -54,9 +54,9 @@ class Enemy {
       this.game.mouse.pressed &&
       !this.game.mouse.fired
     ) {
-      if (!this.isAlive()) this.setState(2);
       this.lives--;
       this.game.mouse.fired = true;
+      if (!this.isAlive()) this.setState(2);
     }
   }
 
