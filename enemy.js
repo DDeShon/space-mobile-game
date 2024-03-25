@@ -194,12 +194,6 @@ class Phantommorph extends Enemy {
     this.image = document.getElementById("phantommorph");
     this.lastFrame = 12;
     this.minFrame = 6;
-    // this.states = [
-    //   new Flying(game, this),
-    //   new Phasing(game, this),
-    //   new Imploding(game, this),
-    // ];
-    // this.currentState;
     this.switchTimer = 0;
     this.switchInterval = Math.random() * 2000 + 1000;
   }
@@ -237,7 +231,6 @@ class Phantommorph extends Enemy {
 
   hit() {
     super.hit();
-    // if (!this.isAlive()) this.setState(2);
   }
 
   update(deltaTime) {
