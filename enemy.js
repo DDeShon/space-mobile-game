@@ -204,11 +204,6 @@ class Phantommorph extends Enemy {
     this.setState(Math.floor(Math.random() * 2));
   }
 
-  // setState(state) {
-  //   this.currentState = this.states[state];
-  //   this.currentState.start();
-  // }
-
   handleFrames() {
     if (this.game.spriteUpdate) {
       if (this.frameX < this.maxFrame) {
