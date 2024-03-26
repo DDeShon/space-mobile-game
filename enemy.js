@@ -121,7 +121,7 @@ class Beetlemorph extends Enemy {
   constructor(game) {
     super(game);
     this.image = document.getElementById("beetlemorph");
-    this.lastFrame = 2;
+    this.lastFrame = 3;
     this.minFrame = 0;
   }
 
