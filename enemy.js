@@ -230,11 +230,12 @@ class Phantommorph extends Enemy {
     super.update();
     if (!this.free) {
       this.currentState.update();
-      // move horizontally
+      // move the enemy horizontally
       if (this.x <= 0 || this.x >= this.game.width - this.width) {
         this.speedX *= -1;
       }
 
+      // manage switching states
       if (this.isAlive()) {
         if (this.switchTimer < this.switchInterval) {
           this.switchTimer += deltaTime;
