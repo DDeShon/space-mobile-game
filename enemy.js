@@ -190,7 +190,7 @@ class Phantommorph extends Enemy {
   constructor(game) {
     super(game);
     this.image = document.getElementById("phantommorph");
-    this.lastFrame = 11;
+    this.lastFrame = 12;
     this.minFrame = 6;
     this.switchTimer = 0;
     this.switchInterval = Math.random() * 2000 + 1000;
@@ -295,8 +295,9 @@ class Phasing extends EnemyState {
 
 class Imploding extends EnemyState {
   start() {
+    this.enemy.minFrame;
     this.enemy.maxFrame = this.enemy.lastFrame + 1;
-    this.enemy.frameX = this.enemy.minFrame + 1;
+    this.enemy.frameX = this.enemy.minFrame;
     this.game.sound.play(
       this.game.sound.boomSounds[Math.floor(Math.random() * 4)]
     );
