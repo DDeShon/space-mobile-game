@@ -296,7 +296,7 @@ class Phasing extends EnemyState {
 class Imploding extends EnemyState {
   start() {
     this.enemy.maxFrame = this.enemy.lastFrame + 1;
-    this.enemy.frameX = this.enemy.minFrame;
+    this.enemy.frameX = this.enemy.minFrame + 1;
     this.game.sound.play(
       this.game.sound.boomSounds[Math.floor(Math.random() * 4)]
     );
