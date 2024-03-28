@@ -190,7 +190,7 @@ class Phantommorph extends Enemy {
   constructor(game) {
     super(game);
     this.image = document.getElementById("phantommorph");
-    this.lastFrame = 12;
+    this.lastFrame = 11;
     this.minFrame = 6;
     this.switchTimer = 0;
     this.switchInterval = Math.random() * 2000 + 1000;
