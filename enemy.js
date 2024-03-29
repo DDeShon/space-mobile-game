@@ -287,7 +287,7 @@ class Phasing extends EnemyState {
     ) {
       this.enemy.y += 25;
       this.enemy.speedX = 0;
-      this.enemy.speedY = 2;
+      this.enemy.speedY = 2.5;
       this.game.sound.play(this.game.sound.slide);
     }
   }
