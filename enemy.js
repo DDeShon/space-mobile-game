@@ -62,7 +62,7 @@ class Enemy {
 
   update() {
     if (!this.free) {
-      // float in
+      // make the enemies float in
       if (this.y < 0) this.y += 5;
 
       // make sure the enemy is always visible
@@ -132,10 +132,6 @@ class Beetlemorph extends Enemy {
     this.lives = 1;
   }
 
-  hit() {
-    super.hit();
-  }
-
   update() {
     super.update();
     this.frameX = 0;
@@ -160,10 +156,6 @@ class Lobstermorph extends Enemy {
     this.speedX = 0;
     this.speedY = Math.random() * 0.5 + 0.2;
     this.lives = 3;
-  }
-
-  hit() {
-    super.hit();
   }
 
   update() {
@@ -220,10 +212,6 @@ class Phantommorph extends Enemy {
     } else {
       this.setState(0);
     }
-  }
-
-  hit() {
-    super.hit();
   }
 
   update(deltaTime) {
