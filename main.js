@@ -226,7 +226,7 @@ class Game {
     this.ctx.fillText("Score:  " + this.score, 20, 40);
     for (let i = 0; i < this.lives; i++) {
       const width = 20;
-      const height = 45;
+      const height = 35;
       this.ctx.drawImage(
         this.crewImage,
         width * this.crewMembers[i].frameX,
