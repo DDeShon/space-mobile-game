@@ -155,7 +155,7 @@ class Lobstermorph extends Enemy {
     super.start();
     this.speedX = 0;
     this.speedY = Math.random() * 0.5 + 0.2;
-    this.lives = 3;
+    this.lives = 2;
   }
 
   update() {
