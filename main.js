@@ -169,13 +169,13 @@ class Game {
     for (let i = 0; i < this.numberOfEnemies; i++) {
       const randomNumber = Math.random();
       const score = this.score;
-      // if (randomNumber < 0.8) {
-      //   this.enemyPool.push(new Beetlemorph(this));
-      // } else if (randomNumber > 0.8) {
-      //   this.enemyPool.push(new Lobstermorph(this));
-      // }
+      if (randomNumber < 0.8) {
+        this.enemyPool.push(new Beetlemorph(this));
+      } else if (randomNumber > 0.8) {
+        this.enemyPool.push(new Lobstermorph(this));
+      }
 
-      this.enemyPool.push(new Phantommorph(this));
+      // this.enemyPool.push(new Phantommorph(this));
     }
   }
 
