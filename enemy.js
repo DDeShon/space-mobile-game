@@ -185,7 +185,7 @@ class Phantommorph extends Enemy {
     this.lastFrame = 12;
     this.minFrame = 6;
     this.switchTimer = 0;
-    this.switchInterval = Math.random() * 2000 + 1000;
+    this.switchInterval = Math.random() * 2000 + 1500;
   }
 
   start() {
