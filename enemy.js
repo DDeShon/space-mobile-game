@@ -48,7 +48,7 @@ class Enemy {
   }
 
   hit() {
-    // check collision
+    // check for enemy collision
     if (
       this.game.checkCollision(this, this.game.mouse) &&
       this.game.mouse.pressed &&
