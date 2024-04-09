@@ -48,7 +48,7 @@ class Enemy {
   }
 
   hit() {
-    // check for enemy collision
+    // check for enemy collisions
     if (
       this.game.checkCollision(this, this.game.mouse) &&
       this.game.mouse.pressed &&
@@ -80,6 +80,7 @@ class Enemy {
         }
       }
 
+      // if enemy is out of lives, play death animation and increase score
       if (!this.isAlive()) {
         if (this.game.spriteUpdate) {
           this.frameX++;
