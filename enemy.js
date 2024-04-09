@@ -72,6 +72,7 @@ class Enemy {
       this.x += this.speedX;
       this.y += this.speedY;
 
+      // reduce player lives if enemy reaches the bottom of the screen
       if (this.y > this.game.height) {
         this.reset();
         if (!this.game.gameOver) {
