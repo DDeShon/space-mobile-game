@@ -18,6 +18,7 @@ class Enemy {
     this.lives;
     this.free = true;
 
+    // set up enemy states
     this.states = [
       new Flying(game, this),
       new Phasing(game, this),
