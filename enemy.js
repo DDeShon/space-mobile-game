@@ -108,6 +108,8 @@ class Enemy {
         this.width,
         this.height
       );
+
+      // set up debug mode
       if (this.game.debug) {
         this.game.ctx.strokeRect(this.x, this.y, this.width, this.height);
         this.game.ctx.fillText(
