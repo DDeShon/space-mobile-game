@@ -242,6 +242,8 @@ class Game {
     if (this.lives < 1 || this.score >= this.winningScore) {
       this.triggerGameOver();
     }
+
+    // show game over screen
     if (this.gameOver) {
       this.ctx.textAlign = "center";
       this.ctx.font = "80px Bangers";
