@@ -239,6 +239,8 @@ class Game {
         height
       );
     }
+
+    // provide game win condition
     if (this.lives < 1 || this.score >= this.winningScore) {
       this.triggerGameOver();
     }
