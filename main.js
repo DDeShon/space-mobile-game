@@ -221,6 +221,7 @@ class Game {
   }
 
   drawStatusText() {
+    // set up score and lives
     this.ctx.save();
     this.ctx.textAlign = "left";
     this.ctx.fillText("Score:  " + this.score, 20, 40);
