@@ -221,7 +221,7 @@ class Game {
   }
 
   drawStatusText() {
-    // set up score and lives
+    // set up score and lives overlay
     this.ctx.save();
     this.ctx.textAlign = "left";
     this.ctx.fillText("Score:  " + this.score, 20, 40);
@@ -246,7 +246,7 @@ class Game {
       this.triggerGameOver();
     }
 
-    // show game over screen
+    // show game over screen and messages
     if (this.gameOver) {
       this.ctx.textAlign = "center";
       this.ctx.font = "80px Bangers";
