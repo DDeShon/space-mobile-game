@@ -276,6 +276,7 @@ class Game {
     this.drawStatusText();
     // initialize enemies
     if (!this.gameOver) this.handleEnemies(deltaTime);
+    // create pool of enemies
     for (let i = this.enemyPool.length - 1; i >= 0; i--) {
       this.enemyPool[i].update(deltaTime);
     }
