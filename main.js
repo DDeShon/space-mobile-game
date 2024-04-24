@@ -287,6 +287,7 @@ class Game {
 }
 
 window.addEventListener("load", function () {
+  // set up game canvas
   const canvas = this.document.getElementById("canvas1");
   const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
