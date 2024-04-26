@@ -296,6 +296,8 @@ window.addEventListener("load", function () {
   const game = new Game(canvas, ctx);
 
   let lastTime = 0;
+
+  // animate game
   function animate(timeStamp) {
     const deltaTime = timeStamp - lastTime;
     lastTime = timeStamp;
