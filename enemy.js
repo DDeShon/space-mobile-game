@@ -212,7 +212,7 @@ class Phantommorph extends Enemy {
   }
 
   switch() {
-    // switch states between phased and flying
+    // switch states between phasing and flying
     if (this.currentState === this.states[0]) {
       this.setState(1);
     } else {
